@@ -125,7 +125,7 @@ from google.genai.types import GenerateContentConfig
 def _mk_openai(model, company, industry, query, lang, country, sys_p, user_p):
     articles = scrape_google_news(query, lang, country)
     titles = [a["title"] for a in articles]
-    client = openai.OpenAI(api_key=st.sectrets["openai_key"])
+    client = openai.OpenAI(api_key=st.secrets["openai_key"])
     msgs = [
         {
             "role": "system",
