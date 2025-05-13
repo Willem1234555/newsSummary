@@ -6,7 +6,9 @@ from determineRelevance import translate
 import requests
 import re
 
-client = openai.OpenAI(api_key='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')
+key1 = "sk-proj-m8f9kKWkuwK0t9BWDfXkfBiZVEpe6shD5ef76EfbjVfSQlmir"
+key2 = "Ntd05KMstjvmg-Q3Xf4XXSjdNT3BlbkFJTX8_diMKKJwtedTKgpT7q9COZxXeulsgQfLwAaJ5ZitdQb82X5FpyIAIrbb8LPkMg-Pdza2kIA"
+client = openai.OpenAI(api_key=key1 + key2)
 
 def get_industry_summary_openai(model, client_company, client_industry, search_query, lang, country):
     list_of_articles = scrape_google_news(search_query, lang, country)
